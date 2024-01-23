@@ -1,0 +1,17 @@
+i = 1;
+mag = 0;
+function retval =  unitVector(x)
+  sz = size(x);
+  mag = 0;
+  i = 1;
+  while (i <= sz)
+    mag = mag + (x(i))^2;
+    i++;
+  endwhile
+  i = 1;
+  while (i <= sz)
+    retval(i) = x(i)/mag;
+    i++;
+  endwhile
+  disp(retval);
+endfunction
