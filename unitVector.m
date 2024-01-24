@@ -1,16 +1,16 @@
-
 function unitVector(x)
-  sz = size(x);
+  sz = length(x);
   mag = 0;
-  i = 0;
-  while (i < sz)
-    mag = mag + (x(i))^2;
-    i++;
-  endwhile
+  for i = 1:sz
+	  mag = mag + (x(i))^2;
+  endfor
+  mag = sqrt(mag);
+  for i = 1:sz
+	  x(i) = x(i)/mag;
+  endfor
+
+  disp(x);
+endfunction
+
+
   
-  while (i < sz)
-    x(i) = x(i)/mag;
-    disp(x);
-  endwhile
-  
-end
