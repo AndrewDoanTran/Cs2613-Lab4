@@ -12,5 +12,24 @@ function unitVector(x)
   disp(x);
 endfunction
 
+function getValue(y)
+  count = 1;
+  newVector();
+  for count == y
+    input_vec = input();
+    newVector(i) = input_vec;
+    count++;
+  endfor
+  disp(unitVector(y));
+  
+endfunction
+
+  
+  
+
+
+input_amount = input('How many values would you like to input? ');
+a = getValue(input_amount);
+
 
   
